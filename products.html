@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products - Oxford Sofa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="logo.png" alt="Oxford Sofa Logo"></a>
+        </div>
+
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html" class="active" aria-current="page">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="cart-icon">
+                🛒 <span id="cart-count">0</span>
+            </li>
+        </ul>
+    </nav>
+    <div style="padding-top: 40px; text-align: center;">
+        <h1 style="font-size: 36px; margin-bottom: 10px;">Our Collection</h1>
+        <p style="color: #666; margin-bottom: 40px;">Explore our wide range of premium furniture.</p>
+    </div>
+
+    <!-- Category cards -->
+    <section class="categories">
+        <div class="category-card" onclick="selectCategory('sofa')">
+            <img src="https://i.pinimg.com/1200x/c4/f9/c6/c4f9c631a0074ad9f4b172a57eef7b41.jpg"
+                alt="Sofas">
+            <h3>Sofas</h3>
+        </div>
+        <div class="category-card" onclick="selectCategory('table')">
+            <img src="https://i.pinimg.com/736x/c9/fa/39/c9fa399802538e7e1bf168d35829adfc.jpg"
+                alt="Tables">
+            <h3>Tables</h3>
+        </div>
+        <div class="category-card" onclick="selectCategory('chair')">
+            <img src="https://i.pinimg.com/1200x/4f/e6/43/4fe643e280dd6c1eb88fdff336bb5ba5.jpg"
+                alt="Chairs">
+            <h3>Chairs</h3>
+        </div>
+    </section>
+
+    <!-- Filter section -->
+    <section class="filters">
+        <button onclick="filterProducts('all')" class="active">All</button>
+        <button onclick="filterProducts('sofa')">Sofa</button>
+        <button onclick="filterProducts('table')">Table</button>
+        <button onclick="filterProducts('chair')">Chair</button>
+    </section>
+    <section class="products" id="products">
+
+        <!-- Sofas -->
+        <div class="card sofa">
+            <img src="https://healsway.us/cdn/shop/products/01_7ba2b3d9-7140-42b2-adf4-81420ffdf599.jpg?v=1703082471" alt="Luxury Sofa">
+            <h3>Luxury Sofa</h3>
+            <p>$899</p>
+            <p class="desc">Elegant design with premium materials for ultimate comfort.</p>
+            <button onclick="addToCart(1)">Add to Cart</button>
+        </div>
+
+        <div class="card sofa">
+            <img src="https://i.pinimg.com/1200x/02/3d/07/023d07b954eaaa546a142b36d88fea9e.jpg" alt="Minimal Sofa">
+            <h3>Minimal Sofa</h3>
+            <p>$749</p>
+            <p class="desc">Simple and stylish sofa perfect for modern apartments.</p>
+            <button onclick="addToCart(2)">Add to Cart</button>
+        </div>
+
+        <div class="card sofa">
+            <img src="https://nobili-design.com/storage/pages/847/lg/Learn_from_Designers_how_to_Choose_the_Classic_Sofa_for_your_Living_Room.webp"
+                alt="Classic Sofa">
+            <h3>Classic Sofa</h3>
+            <p>$799</p>
+            <p class="desc">Traditional design with durable fabric and long-lasting comfort.</p>
+            <button onclick="addToCart(3)">Add to Cart</button>
+        </div>
+
+        <div class="card sofa">
+            <img src="https://images.pexels.com/photos/8135269/pexels-photo-8135269.jpeg" alt="Modern Sofa">
+            <h3>Modern Sofa</h3>
+            <p>$999</p>
+            <p class="desc">Sleek modern sofa with wide seating and soft cushioning.</p>
+            <button onclick="addToCart(4)">Add to Cart</button>
+        </div>
+
+        <div class="card sofa">
+            <img src="https://images.unsplash.com/photo-1759722665610-e13e59aa117b?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Comfort Sofa">
+            <h3>Comfort Sofa</h3>
+            <p>$699</p>
+            <p class="desc">Extra-soft cushions designed for maximum relaxation.</p>
+            <button onclick="addToCart(5)">Add to Cart</button>
+        </div>
+
+        <!-- Tables -->
+        <div class="card table">
+            <img src="https://images.pexels.com/photos/2140980/pexels-photo-2140980.jpeg" alt="Dining Table">
+            <h3>Dining Table</h3>
+            <p>$599</p>
+            <p class="desc">Sturdy wooden table with a smooth, elegant finish.</p>
+            <button onclick="addToCart(6)">Add to Cart</button>
+        </div>
+
+        <div class="card table">
+            <img src="https://cdn.pixabay.com/photo/2023/11/30/07/08/bread-8420931_1280.jpg" alt="Coffee Table">
+            <h3>Coffee Table</h3>
+            <p>$349</p>
+            <p class="desc">Compact coffee table ideal for living rooms and lounges.</p>
+            <button onclick="addToCart(7)">Add to Cart</button>
+        </div>
+
+        <div class="card table">
+            <img src="https://cdn.pixabay.com/photo/2021/12/18/07/55/cup-6878196_1280.jpg" alt="Wooden Table">
+            <h3>Wooden Table</h3>
+            <p>$499</p>
+            <p class="desc">Solid wooden table with premium polish and durability.</p>
+            <button onclick="addToCart(8)">Add to Cart</button>
+        </div>
+
+        <div class="card table">
+            <img src="https://images.unsplash.com/photo-1571624436279-b272aff752b5?q=80&w=2344&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Office Table">
+            <h3>Office Table</h3>
+            <p>$649</p>
+            <p class="desc">Professional office table with clean design and strong build.</p>
+            <button onclick="addToCart(9)">Add to Cart</button>
+        </div>
+
+        <div class="card table">
+            <img src="https://images.unsplash.com/photo-1523841790171-6189ac051a5c?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Glass Table">
+            <h3>Glass Table</h3>
+            <p>$699</p>
+            <p class="desc">Stylish glass table with modern look and sturdy base.</p>
+            <button onclick="addToCart(10)">Add to Cart</button>
+        </div>
+
+        <!-- Chairs -->
+        <div class="card chair">
+            <img src="https://plus.unsplash.com/premium_photo-1661962796359-68221d943c29?q=80&w=2432&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Office Chair">
+            <h3>Office Chair</h3>
+            <p>$199</p>
+            <p class="desc">Ergonomic chair with adjustable height and back support.</p>
+            <button onclick="addToCart(11)">Add to Cart</button>
+        </div>
+
+        <div class="card chair">
+            <img src="https://images.unsplash.com/photo-1611769446369-d2895c2fcc91?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Relax Chair">
+            <h3>Relax Chair</h3>
+            <p>$229</p>
+            <p class="desc">Comfortable lounge chair perfect for relaxation.</p>
+            <button onclick="addToCart(12)">Add to Cart</button>
+        </div>
+
+        <div class="card chair">
+            <img src="https://images.unsplash.com/photo-1602872030490-4a484a7b3ba6?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Dining Chair">
+            <h3>Dining Chair</h3>
+            <p>$149</p>
+            <p class="desc">Lightweight dining chair with modern design.</p>
+            <button onclick="addToCart(13)">Add to Cart</button>
+        </div>
+
+        <div class="card chair">
+            <img src="https://plus.unsplash.com/premium_photo-1683120975679-dbca0a428106?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Luxury Chair">
+            <h3>Luxury Chair</h3>
+            <p>$249</p>
+            <p class="desc">Premium chair with elegant design and plush seating.</p>
+            <button onclick="addToCart(14)">Add to Cart</button>
+        </div>
+
+        <div class="card chair">
+            <img src="https://images.pexels.com/photos/923192/pexels-photo-923192.jpeg" alt="Comfort Chair">
+            <h3>Comfort Chair</h3>
+            <p>$179</p>
+            <p class="desc">Soft cushioned chair for everyday comfort.</p>
+            <button onclick="addToCart(15)">Add to Cart</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="logo">
+                <img src="logo.png" alt="Oxford Sofa Logo">
+            </div>
+
+            <p class="tagline">Premium Furniture for Modern Living</p>
+
+            <!-- Social media links -->
+            <div class="social-links">
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Pinterest</a>
+            </div>
+
+            <p class="copyright">© 2026 Oxford Sofa. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

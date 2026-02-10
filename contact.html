@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Oxford Sofa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar-->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="logo.png" alt="Oxford Sofa Logo"></a>
+        </div>
+
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+            <li class="cart-icon">
+                🛒 <span id="cart-count">0</span>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Contact section -->
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <h2>Contact Us</h2>
+            <p>Have questions or need help choosing furniture? We'd love to hear from you.</p>
+
+            <div class="contact-content">
+
+                <!-- contact details -->
+                <div class="contact-info">
+                    <p><strong>📍 Address:</strong> Oxford Sofa, Karachi,Pakistan</p>
+                    <p><strong>📞 Phone:</strong> +92 41 610 43947</p>
+                    <p><strong>📧 Email:</strong> support@oxfordsofa.com</p>
+                </div>
+
+                <!-- Form -->
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="logo">
+                <img src="logo.png" alt="Oxford Sofa Logo">
+            </div>
+
+            <p class="tagline">Premium Furniture for Modern Living</p>
+
+            <div class="social-links">
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Pinterest</a>
+            </div>
+
+            <p class="copyright">© 2026 Oxford Sofa. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
